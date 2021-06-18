@@ -25,4 +25,4 @@ Supports 1.8.x - 1.16.x
 ### Some commands
 
 - `/ba book` - Gives you a book (breweryaddon.getbook)
-- `/ba reload` - Reloads config and langs
+- `/ba reload` - Reloads config and languages (breweryaddon.reload)
