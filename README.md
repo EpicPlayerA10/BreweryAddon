@@ -7,6 +7,7 @@ Supports 1.8.x - 1.16.x
 - [Features](https://github.com/EpicPlayerA10/BreweryAddon#features)
 - [Instalation](https://github.com/EpicPlayerA10/BreweryAddon#installation)
 - [Usage](https://github.com/EpicPlayerA10/BreweryAddon#usage)
+  - [Some commands](https://github.com/EpicPlayerA10/BreweryAddon#some-commands)
 
 ## Features
 - View ingredients in the cauldron
