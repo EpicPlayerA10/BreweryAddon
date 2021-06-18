@@ -4,8 +4,13 @@ BreweryAddon is a Spigot plugin which is an addon for [Brewery](https://dev.bukk
 Supports 1.8.x - 1.16.x
 
 ### :world_map: Navigation
+- [Features](https://github.com/EpicPlayerA10/BreweryAddon#features)
 - [Instalation](https://github.com/EpicPlayerA10/BreweryAddon#installation)
 - [Usage](https://github.com/EpicPlayerA10/BreweryAddon#usage)
+
+## Features
+- View ingredients in the cauldron
+- Get recipe book
 
 ## Installation
 - Click on Releases and click on the first `eBreweryAddon.jar`
@@ -14,3 +19,9 @@ Supports 1.8.x - 1.16.x
 
 ## Usage
 
+`View ingredients in the cauldron` - shift and right click with clock on the cauldron
+
+### Some commands
+
+- `/ba book` - Gives you a book (breweryaddon.getbook)
+- `/ba reload` - Reloads config and langs
