@@ -1,0 +1,9 @@
+#Book options
+book:
+  title: "&aRecipes"
+  author: "BreweryAddon"
+
+  #Update book option (on the last page)
+  updatebook: true
+
+locale: en_US

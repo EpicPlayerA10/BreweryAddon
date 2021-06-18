@@ -1,0 +1,29 @@
+recipesbook:
+  ingredients: "Ingredients:"
+  cookingtime: "Cooking Time: "
+  distillation: "Distillation: "
+  distillruns:
+    1: "run"
+    2: "runs"
+    5: "runs"
+  aging: "Aging: "
+  years:
+    1: "year"
+    2: "years"
+    5: "years"
+  wood: "Wood: "
+  alcohol: "Alcohol: "
+  effects: "Effects:"
+  _yes: "Yes"
+  _no: "No"
+
+woodName:
+  any: "Any"
+  birch: "Birch"
+  oak: "Oak"
+  jungle: "Jungle"
+  spruce: "Spruce"
+  acacia: "Acacia"
+  dark_oak: "Dark Oak"
+  crimson: "Crimson"
+  warped: "Warped"
