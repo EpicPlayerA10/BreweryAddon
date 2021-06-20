@@ -3,6 +3,7 @@ package com.epicplayera10.breweryaddon.utils;
 import com.dre.brewery.integration.item.SlimefunPluginItem;
 import com.dre.brewery.recipe.BEffect;
 import com.dre.brewery.recipe.BRecipe;
+import com.dre.brewery.recipe.PluginItem;
 import com.dre.brewery.recipe.RecipeItem;
 import com.epicplayera10.breweryaddon.BreweryAddon;
 import net.md_5.bungee.api.chat.BaseComponent;
@@ -65,13 +66,13 @@ public class BookUtil {
             boolean first = true;
             for(RecipeItem item : recipe.getIngredients())
             {
-                if(item instanceof SlimefunPluginItem)
+                if(item instanceof PluginItem)
                 {
                     if (first) {
-                        sb.append(" "+item.getAmount() + " " + ChatUtil.format(((SlimefunPluginItem)item).getItemId()));
+                        sb.append(" "+item.getAmount() + " " + ChatUtil.format(((PluginItem)item).getItemId()));
                         first = false;
                     } else {
-                        sb.append(", " + item.getAmount() + " " + ChatUtil.format(((SlimefunPluginItem)item).getItemId()));
+                        sb.append(", " + item.getAmount() + " " + ChatUtil.format(((PluginItem)item).getItemId()));
                     }
                 } else if(item.getMaterials().size() != 1) {
                     if(first)
