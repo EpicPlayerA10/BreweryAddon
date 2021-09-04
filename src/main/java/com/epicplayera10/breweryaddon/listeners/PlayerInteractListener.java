@@ -20,21 +20,15 @@ import java.lang.reflect.Field;
 public class PlayerInteractListener implements Listener {
 
     @EventHandler
-    public void oninteract(PlayerInteractEvent e)
-    {
+    public void onInteract(PlayerInteractEvent e) {
         Player p = e.getPlayer();
-        if(e.getItem() != null && e.getItem().getType() == Material.CLOCK)
-        {
-            if(e.getAction() == Action.RIGHT_CLICK_BLOCK)
-            {
-                if(p.isSneaking())
-                {
-                    if(e.getClickedBlock().getType() == Material.CAULDRON)
-                    {
+        if (e.getItem() != null && e.getItem().getType() == Material.CLOCK) {
+            if (e.getAction() == Action.RIGHT_CLICK_BLOCK) {
+                if (p.isSneaking()) {
+                    if (e.getClickedBlock().getType() == Material.CAULDRON) {
                         BCauldron cauldron = BreweryApi.getCauldron(e.getClickedBlock());
 
-                        if(cauldron == null)
-                        {
+                        if (cauldron == null) {
                             p.sendMessage(ChatUtil.fixColors("&2[BreweryAddon] &cThere aren't any ingredients in this cauldron"));
                             return;
                         }
@@ -47,19 +41,16 @@ public class PlayerInteractListener implements Listener {
                             StringBuilder sb = new StringBuilder();
                             boolean first = true;
                             sb.append(ChatUtil.fixColors("&aIngredients: "));
-                            for(Ingredient ingredient : ingredients.getIngredientList())
-                            {
+                            for (Ingredient ingredient : ingredients.getIngredientList()) {
                                 RecipeItem item = (RecipeItem) ingredient;
-                                if(first)
-                                {
-                                    sb.append(ChatUtil.fixColors("&e"+item.getAmount()+" "+ChatUtil.format(item.getMaterials().get(0).getKey().getKey())));
+                                if (first) {
+                                    sb.append(ChatUtil.fixColors("&e" + item.getAmount() + " " + ChatUtil.format(item.getMaterials().get(0).getKey().getKey())));
                                     first = false;
                                 } else {
-                                    sb.append(ChatUtil.fixColors("&e, "+item.getAmount()+" "+ChatUtil.format(item.getMaterials().get(0).getKey().getKey())));
+                                    sb.append(ChatUtil.fixColors("&e, " + item.getAmount() + " " + ChatUtil.format(item.getMaterials().get(0).getKey().getKey())));
                                 }
                             }
 
-                            //sb.append(ChatUtil.fixColors("\n&aRozpoznany Przepis: &e"+ingredients.));
                             p.sendMessage(sb.toString());
                         } catch (NoSuchFieldException | IllegalAccessException noSuchFieldException) {
                             noSuchFieldException.printStackTrace();

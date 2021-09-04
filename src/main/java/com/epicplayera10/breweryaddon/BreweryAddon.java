@@ -6,14 +6,25 @@ import com.epicplayera10.breweryaddon.utils.EffectUtil;
 import com.epicplayera10.breweryaddon.utils.LanguageLoader;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
-import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.java.JavaPluginLoader;
+
+import java.io.File;
 
 public final class BreweryAddon extends JavaPlugin {
     private static BreweryAddon instance;
     private static LanguageLoader languageLoader;
     private static NamespacedKey namespacedKey;
+
+    public BreweryAddon() {
+        super();
+    }
+
+    public BreweryAddon(JavaPluginLoader loader, PluginDescriptionFile description, File dataFolder, File file) {
+        super(loader, description, dataFolder, file);
+    }
 
     @Override
     public void onEnable() {
@@ -29,12 +40,9 @@ public final class BreweryAddon extends JavaPlugin {
     }
 
     @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
+    public void onDisable() { }
 
-    public static BreweryAddon getInstance()
-    {
+    public static BreweryAddon getInstance() {
         return instance;
     }
 
@@ -46,8 +54,7 @@ public final class BreweryAddon extends JavaPlugin {
         return namespacedKey;
     }
 
-    public void reloadConfigFiles()
-    {
+    public void reloadConfigFiles() {
         reloadConfig();
         languageLoader.loadLang();
     }

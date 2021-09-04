@@ -33,7 +33,6 @@ public class UpdateBookCommand {
             if(book.getType() == Material.WRITTEN_BOOK && meta != null && meta.getPersistentDataContainer().has(BreweryAddon.getNamespacedKey(), PersistentDataType.STRING) && meta.getPersistentDataContainer().get(BreweryAddon.getNamespacedKey(), PersistentDataType.STRING).equals("ba_recipebook"))
             {
                 p.sendMessage(ChatUtil.fixColors("&7Updating book"));
-                //p.getOpenInventory().close();
                 lectern.getInventory().setItem(0, BookUtil.createbook());
                 p.sendMessage(ChatUtil.fixColors("&aUpdated"));
                 return true;
@@ -46,7 +45,6 @@ public class UpdateBookCommand {
             if(book.getType() == Material.WRITTEN_BOOK && meta != null && meta.getPersistentDataContainer().has(BreweryAddon.getNamespacedKey(), PersistentDataType.STRING) && meta.getPersistentDataContainer().get(BreweryAddon.getNamespacedKey(), PersistentDataType.STRING).equals("ba_recipebook"))
             {
                 p.sendMessage(ChatUtil.fixColors("&7Updating book"));
-                //p.getOpenInventory().close();
                 p.getInventory().setItemInMainHand(BookUtil.createbook());
                 p.sendMessage(ChatUtil.fixColors("&aUpdated"));
                 return true;

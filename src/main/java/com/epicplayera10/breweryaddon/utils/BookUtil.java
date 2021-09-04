@@ -25,12 +25,6 @@ import java.util.List;
 public class BookUtil {
     public static ItemStack createbook()
     {
-        /*return new BookBuilder()
-                .setTitle("Przepisy")
-                .setAuthor("BreweryAddon")
-                .setPages(createpages())
-                .build();*/
-
         ItemStack book = new ItemStack(Material.WRITTEN_BOOK, 1);
         BookMeta meta = (BookMeta) book.getItemMeta();
         meta.setAuthor(BreweryAddon.getInstance().getConfig().getString("book.author"));

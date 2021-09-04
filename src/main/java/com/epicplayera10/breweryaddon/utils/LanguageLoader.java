@@ -12,30 +12,31 @@ import java.nio.file.Files;
 public class LanguageLoader {
     FileConfiguration translations;
 
-    public LanguageLoader(){
+    public LanguageLoader() {
         File languageDirectory = new File(BreweryAddon.getInstance().getDataFolder(), "languages/");
         File defaultLanguageFile = new File(BreweryAddon.getInstance().getDataFolder(), "languages/en_US.yml");
-        if (!languageDirectory.isDirectory()){
+        if (!languageDirectory.isDirectory()) {
             languageDirectory.mkdir();
             try {
                 InputStream stream = BreweryAddon.getInstance().getResource("en_US.yml");
                 Files.copy(stream, defaultLanguageFile.toPath());
-                //FileUtils.copyInputStreamToFile(stream, defaultLanguageFile);
-            }
-            catch (IOException e) {
-                    e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
 
         loadLang();
     }
 
-    public String get(String path){
+    public FileConfiguration getFile() {
+        return translations;
+    }
+
+    public String get(String path) {
         return translations.getString(path);
     }
 
-    public void loadLang()
-    {
+    public void loadLang() {
         translations = YamlConfiguration.loadConfiguration(new File(BreweryAddon.getInstance().getDataFolder(), "languages/" + BreweryAddon.getInstance().getConfig().getString("locale") + ".yml"));
     }
 
