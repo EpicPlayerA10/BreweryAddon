@@ -14,7 +14,7 @@ Supports 1.8.x - 1.16.x
 - Get recipe book
 
 ## Installation
-- Click on Releases and click on the first `eBreweryAddon.jar`
+- Click on Releases and click on the first `BreweryAddon.jar`
 - Drag this file into plugins folder
 - Start your server
 
