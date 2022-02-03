@@ -67,7 +67,7 @@ public class RecipeBookCreator {
                         } else {
                             ingredientsBuilder.append(", " + item.getAmount() + " " + ChatUtil.formatText(((PluginItem) item).getItemId()));
                         }
-                    } else if (item.hasMaterials()) {
+                    } else if (item.getMaterials().size() > 0) {
                         if (first) {
                             ingredientsBuilder.append(item.getAmount() + " (");
                             boolean first2 = true;
