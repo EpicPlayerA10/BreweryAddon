@@ -1,3 +1,8 @@
+#Features
+features:
+  recipebook: true
+  checkingredients: true
+
 #Book options
 book:
   title: "&aRecipes"

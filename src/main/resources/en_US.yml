@@ -1,19 +1,19 @@
 recipesbook:
-  ingredients: "Ingredients:"
-  cookingtime: "Cooking Time: "
-  distillation: "Distillation: "
+  ingredients: "Ingredients: %s"
+  cookingtime: "Cooking Time: %smin"
+  distillation: "Distillation: %s"
   distillruns:
     1: "run"
     2: "runs"
     5: "runs"
-  aging: "Aging: "
+  aging: "Aging: %s"
   years:
     1: "year"
     2: "years"
     5: "years"
-  wood: "Wood: "
-  alcohol: "Alcohol: "
-  effects: "Effects:"
+  wood: "Wood: %s"
+  alcohol: "Alcohol: %sml"
+  effects: "Effects: %s"
   _yes: "Yes"
   _no: "No"
 

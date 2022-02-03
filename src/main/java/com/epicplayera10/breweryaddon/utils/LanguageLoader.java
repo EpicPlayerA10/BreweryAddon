@@ -3,6 +3,9 @@ package com.epicplayera10.breweryaddon.utils;
 import com.epicplayera10.breweryaddon.BreweryAddon;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,7 +13,7 @@ import java.io.InputStream;
 import java.nio.file.Files;
 
 public class LanguageLoader {
-    FileConfiguration translations;
+    private FileConfiguration translations;
 
     public LanguageLoader() {
         File languageDirectory = new File(BreweryAddon.getInstance().getDataFolder(), "languages/");
@@ -28,16 +31,14 @@ public class LanguageLoader {
         loadLang();
     }
 
-    public FileConfiguration getFile() {
-        return translations;
-    }
-
-    public String get(String path) {
-        return translations.getString(path);
+    @Nullable
+    public String get(@NotNull String path, @Nullable Object... args) {
+        if (this.translations.getString(path) == null) return null;
+        return String.format(this.translations.getString(path), args);
     }
 
     public void loadLang() {
-        translations = YamlConfiguration.loadConfiguration(new File(BreweryAddon.getInstance().getDataFolder(), "languages/" + BreweryAddon.getInstance().getConfig().getString("locale") + ".yml"));
+        this.translations = YamlConfiguration.loadConfiguration(new File(BreweryAddon.getInstance().getDataFolder(), "languages/" + BreweryAddon.getInstance().getConfig().getString("locale") + ".yml"));
     }
 
 }

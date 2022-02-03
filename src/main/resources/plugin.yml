@@ -1,8 +1,9 @@
-name: eBreweryAddon
+name: BreweryAddon
 version: ${project.version}
 main: com.epicplayera10.breweryaddon.BreweryAddon
-api-version: 1.16
+api-version: 1.14
 authors: [EpicPlayerA10]
 depend: [Brewery]
 commands:
   ba:
+    description: Main BreweryAddon command

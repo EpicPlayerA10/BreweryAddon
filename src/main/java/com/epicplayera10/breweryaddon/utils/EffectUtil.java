@@ -1,49 +1,49 @@
 package com.epicplayera10.breweryaddon.utils;
 
+import org.bukkit.potion.PotionEffectType;
+
 import java.util.HashMap;
 
 public class EffectUtil {
-    private static HashMap<String, String> fixedeffects = new HashMap<>();
+    private static final HashMap<PotionEffectType, String> namedEffects = new HashMap<>();
 
-    public EffectUtil()
-    {
-        fixedeffects.put("ABSORPTION", "Absorption");
-        fixedeffects.put("BAD_OMEN", "Bad Omen");
-        fixedeffects.put("BLINDNESS", "Blindness");
-        fixedeffects.put("CONDUIT_POWER", "Conduit Power");
-        fixedeffects.put("CONFUSION", "Nausea");
-        fixedeffects.put("DAMAGE_RESISTANCE", "Resistance");
-        fixedeffects.put("DOLPHINS_GRACE", "Dolphins Grace");
-        fixedeffects.put("FAST_DIGGING", "Haste");
-        fixedeffects.put("FIRE_RESISTANCE", "Resistance");
-        fixedeffects.put("GLOWING", "Glowing");
-        fixedeffects.put("HARM", "Instant Damage");
-        fixedeffects.put("HEAL", "Instant Health");
-        fixedeffects.put("HEATH_BOOST", "Health Boost");
-        fixedeffects.put("HERO_OF_THE_VILLAGE", "Hero of the village");
-        fixedeffects.put("HUNGER", "Hunger");
-        fixedeffects.put("INCREASE_DAMAGE", "Strength");
-        fixedeffects.put("INVISIBILITY", "Invisibility");
-        fixedeffects.put("JUMP", "Jump Boost");
-        fixedeffects.put("LEVITATION", "Levitation");
-        fixedeffects.put("LUCK", "Luck");
-        fixedeffects.put("NIGHT_VISION", "Night Vision");
-        fixedeffects.put("POISON", "Poison");
-        fixedeffects.put("REGENERATION", "Regeneration");
-        fixedeffects.put("SATURATION", "Saturation");
-        fixedeffects.put("SLOW", "Slowness");
-        fixedeffects.put("SLOW_DIGGING", "Mining Fatigue");
-        fixedeffects.put("SLOW_FALLING", "Slow Falling");
-        fixedeffects.put("SPEED", "Speed");
-        fixedeffects.put("UNLUCK", "Unluck");
-        fixedeffects.put("WATER_BREATHING", "Water Breathing");
-        fixedeffects.put("WEAKNESS", "Weakness");
-        fixedeffects.put("WITHER", "Wither");
+    static {
+        namedEffects.put(PotionEffectType.ABSORPTION, "Absorption");
+        namedEffects.put(PotionEffectType.BAD_OMEN, "Bad Omen");
+        namedEffects.put(PotionEffectType.BLINDNESS, "Blindness");
+        namedEffects.put(PotionEffectType.CONDUIT_POWER, "Conduit Power");
+        namedEffects.put(PotionEffectType.CONFUSION, "Nausea");
+        namedEffects.put(PotionEffectType.DAMAGE_RESISTANCE, "Resistance");
+        namedEffects.put(PotionEffectType.DOLPHINS_GRACE, "Dolphins Grace");
+        namedEffects.put(PotionEffectType.FAST_DIGGING, "Haste");
+        namedEffects.put(PotionEffectType.FIRE_RESISTANCE, "Resistance");
+        namedEffects.put(PotionEffectType.GLOWING, "Glowing");
+        namedEffects.put(PotionEffectType.HARM, "Instant Damage");
+        namedEffects.put(PotionEffectType.HEAL, "Instant Health");
+        namedEffects.put(PotionEffectType.HEALTH_BOOST, "Health Boost");
+        namedEffects.put(PotionEffectType.HERO_OF_THE_VILLAGE, "Hero of the village");
+        namedEffects.put(PotionEffectType.HUNGER, "Hunger");
+        namedEffects.put(PotionEffectType.INCREASE_DAMAGE, "Strength");
+        namedEffects.put(PotionEffectType.INVISIBILITY, "Invisibility");
+        namedEffects.put(PotionEffectType.JUMP, "Jump Boost");
+        namedEffects.put(PotionEffectType.LEVITATION, "Levitation");
+        namedEffects.put(PotionEffectType.LUCK, "Luck");
+        namedEffects.put(PotionEffectType.NIGHT_VISION, "Night Vision");
+        namedEffects.put(PotionEffectType.POISON, "Poison");
+        namedEffects.put(PotionEffectType.REGENERATION, "Regeneration");
+        namedEffects.put(PotionEffectType.SATURATION, "Saturation");
+        namedEffects.put(PotionEffectType.SLOW, "Slowness");
+        namedEffects.put(PotionEffectType.SLOW_DIGGING, "Mining Fatigue");
+        namedEffects.put(PotionEffectType.SLOW_FALLING, "Slow Falling");
+        namedEffects.put(PotionEffectType.SPEED, "Speed");
+        namedEffects.put(PotionEffectType.UNLUCK, "Unluck");
+        namedEffects.put(PotionEffectType.WATER_BREATHING, "Water Breathing");
+        namedEffects.put(PotionEffectType.WEAKNESS, "Weakness");
+        namedEffects.put(PotionEffectType.WITHER, "Wither");
     }
 
-    public static String fixeffect(String effectName)
-    {
-        return fixedeffects.getOrDefault(effectName, "ERROR");
+    public static String fixEffect(PotionEffectType effect) {
+        return namedEffects.getOrDefault(effect, "ERROR");
     }
 
 }
