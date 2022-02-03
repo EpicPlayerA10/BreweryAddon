@@ -19,12 +19,10 @@ import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.potion.PotionEffect;
 import org.jetbrains.annotations.Nullable;
 
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
 public class RecipeBookCreator {
-    private static WeakReference<ItemStack> cachedBook;
     private static final NamespacedKey bookKey = new NamespacedKey(BreweryAddon.getInstance(), "breweryaddon");
 
     public static ItemStack createRecipeBook() {
